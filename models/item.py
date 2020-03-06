@@ -8,23 +8,25 @@ class ItemModel(db.Model):
     meldID = db.Column(db.String(80))
     date = db.Column(db.String(80))
     name = db.Column(db.String(80))
+    telephone = db.Column(db.String(80))
     Email = db.Column(db.String(80))
     toelichting = db.Column(db.String(80))
     latitude = db.Column(db.Float)
     longitude = db.Column(db.Float)
     
 
-    def __init__(self, meldID, date,name,Email,toelichting,latitude,longitude):
+    def __init__(self, meldID, date,name,telephone,Email,toelichting,latitude,longitude):
         self.meldID = meldID
         self.date = date
         self.name = name
+        self.telephone = telephone
         self.Email=Email
         self.toelichting = toelichting
         self.latitude = latitude
         self.longitude = longitude
 
     def json(self):
-        return{'meldID':meldID,'date':date,'name':self.name , 'Email':Email,'toelichting':self.toelichting,'latitude':self.latitude,'longitude':self.longitude}
+        return{'meldID':self.meldID,'date':self.date,'name':self.name ,'telephone':self.telephone 'Email':self.Email,'toelichting':self.toelichting,'latitude':self.latitude,'longitude':self.longitude}
     
     @classmethod
     def find_by_name(cls, name):

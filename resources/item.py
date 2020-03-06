@@ -38,7 +38,8 @@ class Item(Resource):
         Email = data["features"][0]['properties']['Score']
         #return {"message":cordinates[1]}
         #item =ItemModel(name, Score,cordinates[0],cordinates[1])
-        item =ItemModel(meldID,date,name,Email,toelichting,telephone,cordinates[0],cordinates[1])
+        item =ItemModel(meldID,date,name,telephone,Email,toelichting,cordinates[0],cordinates[1])
+        
 
   
 
