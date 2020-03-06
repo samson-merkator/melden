@@ -31,13 +31,13 @@ class Item(Resource):
             #print(key, value)
        
         #Score = data["features"][0]['properties']['Score']
-        meldID= data["id"]
-        date =data["date"]
-        telephone = data["telephone"]
-        Email = data["email"]
-        toelichting= data["toelichting"]
-        latitiude = data["XCoordinaat"]
-        longitude = data["YCoordinaat"]
+        meldID= data["features"][0]['properties']['Score']
+        date =data["features"][0]['properties']['Score']
+        telephone = data["features"][0]['properties']['Score']
+        Email = data["features"][0]['properties']['Score']
+        toelichting= data["features"][0]['properties']['Score']
+        latitiude = data["features"][0]['properties']['Score']
+        longitude = data["features"][0]['properties']['Score']
 
         #return {"message":cordinates[1]}
         #item =ItemModel(name, Score,cordinates[0],cordinates[1])
