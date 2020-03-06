@@ -8,9 +8,9 @@ class ItemModel(db.Model):
     meldID = db.Column(db.String(80))
     date = db.Column(db.String(80))
     name = db.Column(db.String(80))
-    telephone = db.Column(db.String(80))
+    telephone = db.Column(db.Integer(80))
     Email = db.Column(db.String(80))
-    toelichting = db.Column(db.String(80))
+    toelichting = db.Column(db.String(120))
     latitude = db.Column(db.Float)
     longitude = db.Column(db.Float)
     
